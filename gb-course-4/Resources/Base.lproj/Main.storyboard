@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginController" customModule="gb_course_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6g-OZ-XiJ">
+                                <rect key="frame" x="0.0" y="364" width="414" height="168"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thi-7z-jAb">
+                                        <rect key="frame" x="174.5" y="132.5" width="65" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Войти"/>
+                                        <connections>
+                                            <segue destination="qZj-Gt-aNs" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="CgN-kp-ZIS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Thi-7z-jAb" firstAttribute="centerX" secondItem="F6g-OZ-XiJ" secondAttribute="centerX" id="OkG-93-6Me"/>
+                                    <constraint firstAttribute="height" constant="168" id="lWz-bs-bNv"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iX-Dr-lB7">
+                                <rect key="frame" x="122" y="367.5" width="36" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите ваш логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OdJ-oF-ntN">
+                                <rect key="frame" x="122" y="388" width="170" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="13D-wb-WIZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUs-OB-AE6">
+                                <rect key="frame" x="122" y="430" width="43.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите ваш пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IIf-jf-vQk">
+                                <rect key="frame" x="122" y="450.5" width="170" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F6g-OZ-XiJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bsc-gA-KKE"/>
+                            <constraint firstItem="IIf-jf-vQk" firstAttribute="top" secondItem="KUs-OB-AE6" secondAttribute="bottom" constant="6" id="F3W-2I-735"/>
+                            <constraint firstItem="KUs-OB-AE6" firstAttribute="top" secondItem="OdJ-oF-ntN" secondAttribute="bottom" constant="8" id="LGx-Xc-hiC"/>
+                            <constraint firstItem="KUs-OB-AE6" firstAttribute="leading" secondItem="IIf-jf-vQk" secondAttribute="leading" id="LPA-eE-gIC"/>
+                            <constraint firstItem="OdJ-oF-ntN" firstAttribute="top" secondItem="F6g-OZ-XiJ" secondAttribute="top" constant="24" id="MB9-DJ-rEf"/>
+                            <constraint firstItem="IIf-jf-vQk" firstAttribute="width" secondItem="OdJ-oF-ntN" secondAttribute="width" id="YHU-lh-fnp"/>
+                            <constraint firstItem="F6g-OZ-XiJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YX4-xp-TKF"/>
+                            <constraint firstItem="OdJ-oF-ntN" firstAttribute="centerX" secondItem="F6g-OZ-XiJ" secondAttribute="centerX" id="YzF-IZ-Ydi"/>
+                            <constraint firstItem="KUs-OB-AE6" firstAttribute="leading" secondItem="OdJ-oF-ntN" secondAttribute="leading" id="aFg-JG-Obr"/>
+                            <constraint firstItem="9iX-Dr-lB7" firstAttribute="leading" secondItem="OdJ-oF-ntN" secondAttribute="leading" id="aiU-y7-0yl"/>
+                            <constraint firstItem="F6g-OZ-XiJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cvX-nF-q2w"/>
+                            <constraint firstItem="OdJ-oF-ntN" firstAttribute="top" secondItem="9iX-Dr-lB7" secondAttribute="bottom" constant="6" id="kag-dC-1qV"/>
+                            <constraint firstItem="Thi-7z-jAb" firstAttribute="top" secondItem="IIf-jf-vQk" secondAttribute="bottom" constant="12" id="lEy-Eu-6ih"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="OdJ-oF-ntN" id="0W3-dA-tYq"/>
+                        <outlet property="passwordTextField" destination="IIf-jf-vQk" id="Sbg-ES-2g8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="120"/>
+        </scene>
+        <!--Друзья-->
+        <scene sceneID="agX-5C-PAV">
+            <objects>
+                <viewController id="P8I-VM-ji6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v2t-NO-0tz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hC3-nI-N1A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Друзья" image="person.2" catalog="system" selectedImage="person.2.fill" id="Jw5-Tb-ukQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ip-9f-NMG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837" y="420"/>
+        </scene>
+        <!--Новости-->
+        <scene sceneID="cqK-j1-5fk">
+            <objects>
+                <viewController id="o9j-xy-Cyz" customClass="NewsTabController" customModule="gb_course_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tnw-We-XTY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TPZ-KE-gxb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5eS-Oe-5mq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5eS-Oe-5mq" firstAttribute="bottom" secondItem="TPZ-KE-gxb" secondAttribute="bottom" id="BMH-50-3SZ"/>
+                            <constraint firstItem="TPZ-KE-gxb" firstAttribute="top" secondItem="5eS-Oe-5mq" secondAttribute="top" id="MUu-6F-XWF"/>
+                            <constraint firstItem="TPZ-KE-gxb" firstAttribute="leading" secondItem="5eS-Oe-5mq" secondAttribute="leading" id="d9X-jk-u8w"/>
+                            <constraint firstItem="5eS-Oe-5mq" firstAttribute="trailing" secondItem="TPZ-KE-gxb" secondAttribute="trailing" id="fSF-50-vk9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Новости" image="newspaper" catalog="system" selectedImage="newspaper.fill" id="KwB-7u-AC5"/>
+                    <connections>
+                        <outlet property="table" destination="TPZ-KE-gxb" id="cmx-9D-Nx6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3dv-cv-v05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837" y="-186"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DPJ-af-RMS">
+            <objects>
+                <tabBarController id="qZj-Gt-aNs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bAO-vo-3d4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mc7-dv-Sqs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="o9j-xy-Cyz" kind="relationship" relationship="viewControllers" id="4VY-i5-zBE"/>
+                        <segue destination="P8I-VM-ji6" kind="relationship" relationship="viewControllers" id="wtQ-Xi-Kfq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XmU-l7-lDX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="120"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="newspaper" catalog="system" width="128" height="111"/>
+        <image name="newspaper.fill" catalog="system" width="128" height="111"/>
+        <image name="person.2" catalog="system" width="128" height="81"/>
+        <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
