@@ -15,7 +15,7 @@ extension NewsTabController : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        return NewsTabCellType.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,8 +36,24 @@ extension NewsTabController : UITableViewDataSource{
             
             cell.configure()
             return cell
-        default:
-            return UITableViewCell()
+        case .photo:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: reusableName, for: indexPath) as? NewsTabPhotoTableViewCell
+            else { return UITableViewCell() }
+            
+            cell.configure()
+            return cell
+        case .author:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: reusableName, for: indexPath) as? NewsTabAuthorTableViewCell
+            else { return UITableViewCell() }
+            
+            cell.configure()
+            return cell
+        case .counters:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: reusableName, for: indexPath) as? NewsTabCountersTableViewCell
+            else { return UITableViewCell() }
+            
+            cell.configure()
+            return cell
         }
     }
 }

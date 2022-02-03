@@ -1,16 +1,16 @@
 //
-//  NewsTabHeaderTableViewCell.swift
+//  NewsTabAuthorTableViewCell.swift
 //  gb-course-4
 //
-//  Created by Данила Лазин on 27.01.2022.
+//  Created by Данила Лазин on 03.02.2022.
 //
 
 import UIKit
 
-class NewsTabHeaderTableViewCell: UITableViewCell {
-    internal static let cellType = NewsTabCellType.header
+class NewsTabAuthorTableViewCell: UITableViewCell {
+    internal static let cellType = NewsTabCellType.author
     
-    public static let NibName = "NewsTabHeaderTableViewCell"
+    public static let NibName = "NewsTabAuthorTableViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +22,9 @@ class NewsTabHeaderTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
+    
+    // Configure the view for the selected state
     
     func configure() {
         selectionStyle = UITableViewCell.SelectionStyle.none
